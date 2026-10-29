@@ -1,0 +1,14 @@
+z1
+SELECT Rodzaj, Nazwa, Gramatura, Cena FROM wyroby WHERE Rodzaj = 'inne'
+
+z2
+SELECT DISTINCT wyroby.Rodzaj FROM wyroby  
+ORDER BY wyroby.Rodzaj DESC
+
+z3
+SELECT wyroby.ID, wyroby.Nazwa FROM wyroby WHERE Nazwa LIKE "%Chałka%";
+
+
+z4
+SELECT wyroby.Rodzaj,  round(AVG(wyroby.Cena), 2) as srednia_Cena FROM wyroby
+GROUP BY wyroby.Rodzaj;
